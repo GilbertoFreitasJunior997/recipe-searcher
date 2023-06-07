@@ -1,9 +1,10 @@
 import { Layout } from "./components/layout"
+import { SearchBar } from "./components/search-bar"
 
 export const App = () => {
   return (
     <Layout>
-      <h1> Hello world! </h1>
+      <SearchBar />
     </Layout>
   )
 }
