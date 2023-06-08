@@ -8,7 +8,7 @@ export const Layout: FC<PropsWithChildren> = (props) => {
         <div className="flex flex-col w-full min-h-screen">
             <Header />
 
-            <main className="flex-grow bg-gray-950 px-32 py-5">
+            <main className="flex-grow bg-gray-950 px-10 md:px-32 py-5">
                 {children}
             </main>
         </div>

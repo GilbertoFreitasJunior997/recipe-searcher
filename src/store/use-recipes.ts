@@ -7,4 +7,7 @@ export const useRecipes = create<UseRecipeStoreType>()((set) => ({
 
   loading: false,
   setLoading: (loading) => set({ loading }),
+
+  selectedRecipe: undefined,
+  setSelectedRecipe: (selectedRecipe) => set({ selectedRecipe }),
 }));
