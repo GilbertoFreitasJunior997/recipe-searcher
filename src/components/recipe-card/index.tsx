@@ -23,7 +23,7 @@ export const RecipeCard: FC<RecipeCardProps> = (props) => {
         <img
           src={image}
           alt="food image"
-          className="rounded-t-lg w-full h-full bg-slate-700 object-cover bg-center"
+          className="rounded-t-lg w-full h-full bg-gray-700 object-cover bg-center"
         />
       }
       footer={

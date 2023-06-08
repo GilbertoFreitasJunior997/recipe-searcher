@@ -6,7 +6,7 @@ export const Card: FC<CardProps> = (props) => {
 
   return (
     <div
-      className={`w-full h-full min-h-56 flex flex-col shadow-lg ${className}`}
+      className={`w-full h-full min-h-[14rem] flex flex-col shadow-lg ${className}`}
       onClick={onClick}
     >
       <div className="h-3/4 w-full">{header}</div>
