@@ -33,7 +33,7 @@ export const SearchBar = () => {
     >
       <div className="w-full md:w-1/2 flex items-end justify-center gap-3 flex-col md:flex-row">
         <TextInput
-          placeholder="eg. Chicken"
+          placeholder="eg. Pancake"
           label="Search"
           value={searchValue}
           onChange={setSeachValue}
