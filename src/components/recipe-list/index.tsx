@@ -1,7 +1,8 @@
 import { useCallback } from "react";
 import { useRecipes } from "../../store/use-recipes";
 import { RecipeCard } from "../recipe-card";
-import { LoadingCard } from "../loading-card";
+import { ListContainer } from "./list-container";
+import { LoadingTemplate } from "./loading-template";
 
 export const RecipeList = () => {
   const { recipes, loading } = useRecipes(
@@ -18,17 +19,9 @@ export const RecipeList = () => {
     );
   }
 
-  const loadingTemplate = Array(10)
-    .fill(0)
-    .map((_, index) => <LoadingCard key={index} />);
-
   const cards = recipes.map((recipe) => (
     <RecipeCard key={recipe.url} recipe={recipe} />
   ));
 
-  return (
-    <div className="w-full grid auto-rows-[_1fr] sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 xl:grid-col-6 gap-3 mt-4">
-      {loading ? loadingTemplate : cards}
-    </div>
-  );
+  return loading ? <LoadingTemplate /> : <ListContainer>{cards}</ListContainer>;
 };
